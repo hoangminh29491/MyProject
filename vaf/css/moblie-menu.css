@@ -1,0 +1,59 @@
+/*font*/
+@font-face{font-family: "OpenSans"; src: url('../fonts/OpenSans.eot'); src: url('../fonts/OpenSans.eot?#iefix') format('embedded-opentype'), url('../fonts/OpenSans.svg#OpenSans') format('svg'), url('../fonts/OpenSans.woff') format('woff'), url('../fonts/OpenSans.ttf') format('truetype'); font-weight: normal; font-style: normal;}
+@font-face{font-family: "OpenSans-Semibold"; src: url('../fonts/OpenSans-Semibold.eot'); src: url('../fonts/OpenSans-Semibold.eot?#iefix') format('embedded-opentype'), url('../fonts/OpenSans-Semibold.svg#OpenSans-Semibold') format('svg'), url('../fonts/OpenSans-Semibold.woff') format('woff'), url('../fonts/OpenSans-Semibold.ttf') format('truetype'); font-weight: normal; font-style: normal;}
+@font-face{font-family: "OpenSans-Bold"; src: url('../fonts/OpenSans-Bold.eot'); src: url('../fonts/OpenSans-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/OpenSans-Bold.svg#OpenSans-Bold') format('svg'), url('../fonts/OpenSans-Bold.woff') format('woff'), url('../fonts/OpenSans-Bold.ttf') format('truetype'); font-weight: normal; font-style: normal;}
+
+/*-------------------------------*/
+/*           Wrappers            */
+/*-------------------------------*/
+
+#wrapper{padding-left: 0; -webkit-transition: all 0.5s ease; -moz-transition: all 0.5s ease; -o-transition: all 0.5s ease; transition: all 0.5s ease;}
+#wrapper.toggled{padding-left: 220px;}
+#sidebar-wrapper {z-index: 1000; left: 220px; width: 0; height: 100%; margin-left: -220px; overflow-y: auto; overflow-x: hidden; background: rgba(1,119,191,0.1); -webkit-transition: all 0.5s ease; -moz-transition: all 0.5s ease; -o-transition: all 0.5s ease; transition: all 0.5s ease;}
+#sidebar-wrapper::-webkit-scrollbar{display: none;}
+#wrapper.toggled #sidebar-wrapper{width: 220px;}
+#wrapper.toggled #page-content-wrapper{position: absolute; margin-right: -220px;}
+
+/*-------------------------------*/
+/*     Sidebar nav styles        */
+/*-------------------------------*/
+
+.sidebar-nav{width: 230px; height: 750px; float: left; background: rgba(1,119,191,0.7); padding: 5px 0 0 0;}
+.sidebar-nav li{position: relative; line-height: 20px; display: inline-block; width: 100%}
+.sidebar-nav li a{color: #FFF; font-family: "OpenSans-Semibold"; font-size: 14px; position: relative;}
+.sidebar-nav li a:hover,.sidebar-nav li a:active,.sidebar-nav li a:focus,.sidebar-nav li.open a:hover,.sidebar-nav li.open a:active,.sidebar-nav li.open a:focus, .nav .open>a:focus{background: #303030!important; transition: .5s;}
+.sidebar-nav > .sidebar-brand{height: 65px;font-size: 20px;line-height: 44px;}
+.sidebar-nav .dropdown-menu {position: relative; width: 100%; padding: 0; margin: 0; background: #353535; color: #FFF;}
+.dropdown-menu li a{color: #BDBDBD!important; font-family: "OpenSans-Semibold"; font-size: 14px; position: relative; padding: 5px 14px!important;}
+.dropdown-menu li{padding: 5px;}
+.dropdown-menu{ border: none!important; background: none!important; border-radius: 0!important; box-shadow: none!important; -webkit-box-shadow:0!none;}
+
+/*-------------------------------*/
+/*       Hamburger-Cross         */
+/*-------------------------------*/
+
+.hamburger{position: fixed; top: 20px; z-index: 999; display: block; width: 32px; height: 32px; margin-left: 15px;  background: transparent; border: none;}
+.hamburger:hover,.hamburger:focus,.hamburger:active{outline: none;}
+.hamburger.is-closed:before{content: '';display: block; width: 100px; font-size: 14px; color: #fff; line-height: 32px; text-align: center; opacity: 0; -webkit-transform: translate3d(0,0,0); -webkit-transition: all .35s ease-in-out;}
+.hamburger.is-closed:hover:before{opacity: 1; display: block; -webkit-transform: translate3d(-100px,0,0); -webkit-transition: all .35s ease-in-out;}
+
+.hamburger.is-closed .hamb-top,.hamburger.is-closed .hamb-middle,.hamburger.is-closed .hamb-bottom,.hamburger.is-open .hamb-top,.hamburger.is-open .hamb-middle,.hamburger.is-open .hamb-bottom{position: absolute; left: 0; height: 4px; width: 100%;}
+.hamburger.is-closed .hamb-top,.hamburger.is-closed .hamb-middle,.hamburger.is-closed .hamb-bottom{background: #0177BF;}
+.hamburger.is-closed .hamb-top{top: 5px; -webkit-transition: all .35s ease-in-out;}
+.hamburger.is-closed .hamb-middle{top: 50%; margin-top: -2px;}
+.hamburger.is-closed .hamb-bottom{bottom: 5px; -webkit-transition: all .35s ease-in-out;}
+.hamburger.is-closed:hover .hamb-top{top: 0; -webkit-transition: all .35s ease-in-out;}
+.hamburger.is-closed:hover .hamb-bottom {bottom: 0;-webkit-transition: all .35s ease-in-out;}
+.hamburger.is-open .hamb-top,.hamburger.is-open .hamb-middle,.hamburger.is-open .hamb-bottom{background: #0177BF;}
+.hamburger.is-open .hamb-top,.hamburger.is-open .hamb-bottom{top: 50%; margin-top: -2px;}
+.hamburger.is-open .hamb-top{-webkit-transform: rotate(45deg);-webkit-transition: -webkit-transform .2s cubic-bezier(.73,1,.28,.08);}
+.hamburger.is-open .hamb-middle{display: none; }
+.hamburger.is-open .hamb-bottom{-webkit-transform: rotate(-45deg);-webkit-transition: -webkit-transform .2s cubic-bezier(.73,1,.28,.08);}
+.hamburger.is-open:before{content: ''; display: block; width: 100px; font-size: 14px; color: #fff; line-height: 32px; text-align: center; opacity: 0; -webkit-transform: translate3d(0,0,0);-webkit-transition: all .35s ease-in-out;}
+.hamburger.is-open:hover:before{opacity: 1; display: block; -webkit-transform: translate3d(-100px,0,0);-webkit-transition: all .35s ease-in-out;}
+
+/*---------------------------------*/
+/*          Overlay                */
+/*---------------------------------*/
+
+.background-transparent{position: fixed; display: none; width: 100%; height: 100%; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(255,255,255,0.2)!important; z-index: 1;}

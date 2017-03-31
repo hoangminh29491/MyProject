@@ -1,0 +1,19 @@
+
+/*font*/
+@font-face {font-family: "OpenSans-Bold"; src: url('../fonts/OpenSans-Bold.eot'); src: url('../fonts/OpenSans-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/OpenSans-Bold.svg#OpenSans-Bold') format('svg'), url('../fonts/OpenSans-Bold.woff') format('woff'), url('../fonts/OpenSans-Bold.ttf') format('truetype'); font-weight: normal;font-style: normal;}
+/*end-font*/
+
+.sliderNivo .nivoSlider{position: relative;}
+.sliderNivo .nivoSlider a{border: 0; display: block;}
+.sliderNivo .nivo-control{display: block; background: url("../images/li.png") no-repeat; width: 15px; height: 15px; text-indent: -9999px; margin: 0 5px;}
+.sliderNivo .active{background: url("../images/li-active.png") no-repeat; width: 21px; height: 21px;}
+.nivo-controlNav{display: flex; justify-content: center; position: absolute; width: 100%; top: 538px; z-index: 8;}
+
+/*caption*/
+.nivo-html-caption{}
+.nivo-caption{position:absolute; left:0px; top:50px; color:#0177BF; width:100%; z-index:8; padding: 5px 10px; display: none; font-size: 36px; font-family: "OpenSans-Bold"; text-transform: uppercase;}
+.nivo-caption p{padding: 74px 66px 0; margin: 0;}
+.nivo-directionNav{text-indent: -9999px;}
+.sliderNivo .nivoSlider a{margin-left: 512px; font-family: "OpenSans-Bold"; font-size: 14px;}
+.btn-register{border: 1px solid #0177BF; background: #0177BF; padding: 10px 21px;}
+/*end*/
